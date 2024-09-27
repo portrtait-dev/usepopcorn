@@ -97,7 +97,6 @@ export default function App() {
           if (data.Response === "False") throw new Error("Movie not found");
 
           setMovies(data.Search);
-          console.log(data.Search);
         } catch (err) {
           // console.error("----- " + err.message);
           setError(err.message);
@@ -299,6 +298,14 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       getMovieDetails();
     },
     [selectedId]
+  );
+
+  useEffect(
+    function () {
+      if (!title) return;
+      document.title = `Movie | ${title}`;
+    },
+    [title]
   );
 
   return (
