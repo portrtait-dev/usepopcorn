@@ -1,5 +1,13 @@
 # Getting Started with Create React App
 
+Updating a local repository with changes from a GitHub repository: run either:
+
+### `git pull origin master`
+
+or:
+
+### `git pull origin main`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
